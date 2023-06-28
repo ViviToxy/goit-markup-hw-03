@@ -110,8 +110,7 @@ img{
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: var(--title-color);
-    padding: 24px 0;
-
+    padding: 24px;
 }
 
 .header-link:hover,
@@ -133,15 +132,20 @@ img{
     line-height: 1.5;
     letter-spacing: 0.02em;
     color:var(--brand-color);
-
-
+    list-style-type:none;
 }
+
 .contacts-link:hover,
 .contacts-link:focus{
     color: var(--secondary-accent-color);
 }
 
 /* Hero styles */
+
+.hero-container{
+    padding: 188px 0;
+}
+
 .hero-section {
     background-color: var(--bg-color);
     width: 1440px;
@@ -156,7 +160,7 @@ img{
     letter-spacing: 0.02em;
     color:var(--primary-white-color);
     display: flex;
-    width: 496px;
+    max-width: 496px;
     flex-direction: column;
     flex-shrink: 0;
     padding-top: 188px;
@@ -175,12 +179,16 @@ img{
     color:var(--primary-white-color);
     border-radius: 4px;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-    display: inline-flex;
+    display: block;
+    min-width: 169px;
+    height: 56px;
     padding: 16px 32px;
+    border: none;
     align-items: flex-start;
     gap: 10px;
     margin-top:48px;
     margin-left: 636px;
+    cursor: pointer;
 }
 
 
@@ -190,6 +198,20 @@ img{
 }
 
 /* Benefits styles */
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
 
 .section-benefits{
     margin: 120px 156px;
