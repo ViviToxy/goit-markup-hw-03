@@ -29,6 +29,7 @@ img{
     --bg-color:#2E2F42;
     --bg-btn-color:#4D5AE5;
     --bg-white-color: #ffffff;
+    --filtr-btn-color:#E7E9FC;
 }
 
 .container{
@@ -123,7 +124,7 @@ img{
     margin-left: 332px;
 }
 
-.contacts-items{
+.contacts-item{
     display: flex;
     gap: 40px;
 }
@@ -142,15 +143,12 @@ img{
 
 /* Hero styles */
 
-.hero-container{
-    padding: 188px 0;
-}
-
 .hero-section {
     background-color: var(--bg-color);
     width: 1440px;
     height: 600px;
     flex-shrink: 0;
+    padding: 188px 0;
 }
     
 .hero-title {
@@ -214,7 +212,7 @@ img{
 }
 
 .section-benefits{
-    margin: 120px 156px;
+    padding: 120px 0;
 }
 .benefits-title {
     font-weight: 500;
@@ -222,12 +220,20 @@ img{
     line-height: 1.2;
     letter-spacing: 0.02em;
     color:var(--title-color);
+    margin-bottom: 8px;
 }
 
 .benefits-item{
-    width: 1128px;
+    display: flex;
+    gap: 24px;
+
+    /* width: 1128px;
     height: 104px;
-    flex-shrink: 0;
+    flex-shrink: 0; */
+}
+
+.benefits-items{
+    width: calc((100%-72px)/4);
 }
 
 .benefits-text {
@@ -243,6 +249,7 @@ img{
     flex-shrink: 0;
     margin-right: 156px;
     margin-left: 156px;
+    padding-bottom: 120px;
 }
 
 
@@ -253,9 +260,16 @@ img{
     letter-spacing: 0.02em;
     text-transform: capitalize;
     color: var(--title-color); 
-    padding-bottom: 72px;
+    margin-bottom: 72px;
+}
 
+.work-item{
+    display: flex;
+    gap: 24px;
+}
 
+.work-items{
+    width:calc((100%-48px)/3);
 }
 
 
@@ -268,8 +282,7 @@ img{
     text-transform: capitalize;
     color: var(--title-color);
     background-color: var(--secondary-white-color);
-    padding-top: 120px;
-    padding-bottom: 72px;
+    margin-bottom: 72px;
 }
 
 .section-team{
@@ -277,6 +290,8 @@ img{
     width: 1440px;
     height: 732px;
     flex-shrink: 0;
+    padding: 120px 0;
+
 }
     
  .team-title {
@@ -286,16 +301,23 @@ img{
     text-align: center;
     letter-spacing: 0.02em;
     color:var(--title-color);
+    margin-bottom: 8px;
 }
 
 .team-items{
     background-color: var(--primary-white-color);
+    width: calc((100%-72px)/4);
+    border-radius: 0px 0px 4px 4px;
 }
 
-.team-item-container{
-    margin-right: 156px;
-    margin-left: 156px;
-    margin-bottom: 120px;
+.team-item{
+    display: flex;
+    gap: 24px;
+}
+
+.team-text-container{
+    padding: 32px 16px;
+
 }
     
 .team-text {
@@ -310,6 +332,7 @@ img{
     width: 1440px;
     height: 312px;
     flex-shrink: 0;
+    padding: 100px 0;
 }
 
 .footer-logo{
@@ -320,14 +343,16 @@ img{
         letter-spacing: 0.03em;
         text-transform: uppercase;
         color: var(--primary-accent-color);
+        display: inline-block;
+        margin-bottom: 16px;
 }
 
-.footer-content{
+/* .footer-content{
     padding-top: 100px;
     padding-bottom: 100px;
     padding-left: 156px;
-    padding-right: 1020px;
-}  
+    padding-right: 1020px; 
+}    */
 
 .footer-logo-studio {
     color:var(--secondary-white-color);
@@ -342,15 +367,18 @@ img{
 
  /* Portfolio styles */
 
+ .section-main{
+    padding-top: 96px;
+    padding-bottom: 120px;
+ }
+
 .filtr-list{
-    display: inline-flex;
+    display: flex;
+    justify-content: center;
     align-items: flex-start;
     gap: 24px;
     list-style-type: none;
-    margin-left: 427px;
-    margin-top: 168px;
     margin-bottom: 72px;
-    margin-right: 0;
 }
 
 .filtr-button{
@@ -367,14 +395,12 @@ img{
     padding: 12px 24px;
     align-items: flex-start;
     border-radius: 4px;
-    border: 1px solid #E7E9FC;
+    border: 1px solid var(--filtr-btn-color);
 }
 
 .filtr-button:hover,
 .filtr-button:focus{
-    color:var(--primary-white-color);
-    background: var(--secondary-accent-color);
-    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12), 0px 2px 1px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.10);
+  border: 1px solid transparent;
 }    
 
 .filtr-title {
@@ -383,7 +409,7 @@ img{
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: var(--title-color);
-    padding-bottom: 8px;
+    margin-bottom: 8px;
 }
 
 .filtr-title:hover,
@@ -392,9 +418,8 @@ img{
 }
 
 .text-border {
-    border-bottom: 1px solid #E7E9FC;
-    border-right: 1px solid #E7E9FC;
-    border-left: 1px solid #E7E9FC;
+    border: 1px solid #E7E9FC;
+    border-top: none;
     padding: 32px 16px;
 }
 
@@ -407,7 +432,8 @@ img{
 .card-items{
     display: flex;
     flex-wrap: wrap;
-    gap: 48px 24px;
+    column-gap: 24px;
+    row-gap: 48px;
     list-style-type: none;
     padding-bottom: 120px;
 }
