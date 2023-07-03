@@ -13,6 +13,7 @@ ul{
     margin-top: 0;
     margin-bottom: 0;
     padding-left: 0;
+    list-style-type: none;
 }
 
 img{
@@ -145,8 +146,6 @@ img{
 
 .hero-section {
     background-color: var(--bg-color);
-    width: 1440px;
-    height: 600px;
     flex-shrink: 0;
     padding: 188px 0;
 }
@@ -157,12 +156,10 @@ img{
     text-align: center;
     letter-spacing: 0.02em;
     color:var(--primary-white-color);
-    display: flex;
     max-width: 496px;
     flex-direction: column;
     flex-shrink: 0;
-    padding-top: 188px;
-    margin-left: 472px;
+
  
 }
     
