@@ -277,7 +277,7 @@ img{
 .section-team{
     background-color: var(--secondary-white-color);
     flex-shrink: 0;
-    padding: 120px 0;
+    padding: 120px 156px;
 
 }
     
@@ -356,6 +356,8 @@ img{
  .section-main{
     padding-top: 96px;
     padding-bottom: 120px;
+    width: 1158px;
+    margin: 0 auto;
 
  }
 
