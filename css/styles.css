@@ -335,7 +335,6 @@ img{
     line-height: 1.5;
     letter-spacing: 0.02em;
     color:var(--secondary-white-color);
-    margin-top: 18px;
     flex-shrink: 0;
     width: 264px;
 }
